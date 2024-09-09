@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .result {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="result"
+      style="background-color: {{ frappe.form_dict.color or 'black' }}; width: 1000px; height: 500px;"
+    ></div>
+  </body>
+</html>

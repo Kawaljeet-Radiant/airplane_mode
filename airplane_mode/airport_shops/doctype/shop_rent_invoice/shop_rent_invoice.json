@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{tenant_name}-{shop_number}-{MM}-{YYYY}",
+ "creation": "2024-09-10 14:54:28.784582",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_number",
+  "shop_name",
+  "column_break_fnxo",
+  "airport",
+  "tenant_name",
+  "tenant_email",
+  "rent_details_section",
+  "shop_rent",
+  "column_break_qmxy",
+  "rent_last_paid",
+  "section_break_fs9r",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fs9r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shop Rent Invoice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "shop_number.airport",
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_rent.tenant_name",
+   "fieldname": "tenant_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "options": "Tenant Details",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tenant_name.tenant_email",
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email"
+  },
+  {
+   "fieldname": "column_break_fnxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "options": "Shop Details",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_number.shop_name",
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_number.shop_rent",
+   "fieldname": "shop_rent",
+   "fieldtype": "Data",
+   "label": "Shop Rent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_details_section",
+   "fieldtype": "Section Break",
+   "label": "Rent Details"
+  },
+  {
+   "fieldname": "column_break_qmxy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rent_last_paid",
+   "fieldtype": "Date",
+   "label": "Rent Last Paid",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-13 20:53:51.821151",
+ "modified_by": "Administrator",
+ "module": "Airport Shops",
+ "name": "Shop Rent Invoice",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

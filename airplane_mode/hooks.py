@@ -145,8 +145,20 @@ app_license = "mit"
 # 	}
 # }
 
+doc_events = {
+    "Airplane Ticket": {
+        "on_submit": "airplane_mode.create_payment_schedule.create_payment_schedule"
+    }
+}
+
 # Scheduled Tasks
 # ---------------
+
+scheduler_events = {
+    "monthly": [
+        "airplane_mode.scheduled_tasks.send_rent_reminders"
+    ]
+}
 
 # scheduler_events = {
 # 	"all": [

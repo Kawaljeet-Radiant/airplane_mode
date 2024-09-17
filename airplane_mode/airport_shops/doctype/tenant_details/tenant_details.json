@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{tenant_name}-{###}",
+ "creation": "2024-09-10 12:49:04.328172",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_name",
+  "tenant_phone_number",
+  "column_break_uaxy",
+  "tenant_email"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_uaxy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Email"
+  },
+  {
+   "fieldname": "tenant_phone_number",
+   "fieldtype": "Phone",
+   "label": "Tenant Phone Number",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-12 16:02:46.801342",
+ "modified_by": "Administrator",
+ "module": "Airport Shops",
+ "name": "Tenant Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

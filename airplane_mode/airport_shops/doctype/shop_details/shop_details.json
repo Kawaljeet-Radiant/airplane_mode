@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{airport}-{shop_name}-{###}",
+ "creation": "2024-09-10 12:12:46.853799",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "airport",
+  "shop_name",
+  "is_available",
+  "column_break_mogs",
+  "shop_number",
+  "shop_rent",
+  "shop_area_in_sqft"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_area_in_sqft",
+   "fieldtype": "Int",
+   "label": "Shop Area (in sq.ft)"
+  },
+  {
+   "fieldname": "column_break_mogs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "is Available?"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_rent",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Shop Rent",
+   "non_negative": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-12 18:12:52.539178",
+ "modified_by": "Administrator",
+ "module": "Airport Shops",
+ "name": "Shop Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

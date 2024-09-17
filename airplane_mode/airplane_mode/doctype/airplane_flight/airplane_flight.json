@@ -22,9 +22,12 @@
   "duration",
   "column_break_hkhw",
   "time_of_departure",
+  "section_break_rzjy",
+  "crew_members",
   "section_break_rklp",
   "route",
   "column_break_gcwt",
+  "gate_number",
   "is_available"
  ],
  "fields": [
@@ -133,6 +136,24 @@
    "fieldname": "is_available",
    "fieldtype": "Check",
    "label": "Is Available"
+  },
+  {
+   "fieldname": "section_break_rzjy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crew_members",
+   "fieldtype": "Table",
+   "label": "Crew Members",
+   "options": "Crew member Item"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Int",
+   "ignore_user_permissions": 1,
+   "label": "Gate Number",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
@@ -144,7 +165,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-09-06 13:45:06.832625",
+ "modified": "2024-09-13 18:18:59.746235",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

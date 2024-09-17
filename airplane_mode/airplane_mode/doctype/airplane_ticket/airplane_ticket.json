@@ -19,6 +19,7 @@
   "add_ons",
   "section_break_xgiu",
   "flight_price",
+  "payment_due_date",
   "column_break_orvq",
   "total_amount",
   "departure_details_section",
@@ -26,6 +27,7 @@
   "departure_time",
   "column_break_devt",
   "duration_of_flight",
+  "gate_number",
   "amended_from"
  ],
  "fields": [
@@ -41,7 +43,6 @@
    "fetch_from": "flight.source_airport_code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Source Airport Code",
    "read_only": 1,
    "reqd": 1
@@ -157,12 +158,27 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Gate Number",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "payment_due_date",
+   "fieldtype": "Date",
+   "label": "Payment Due Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-06 13:59:37.098785",
+ "modified": "2024-09-13 19:21:29.708125",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

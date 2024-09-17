@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Payment-{flight}",
+ "creation": "2024-09-13 19:00:04.021049",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "passenger_details_section",
+  "name1",
+  "column_break_jfxm",
+  "flight_details_section",
+  "flight",
+  "column_break_ajru",
+  "ticket",
+  "payment_details_section",
+  "amount",
+  "due_date",
+  "column_break_fqst",
+  "status",
+  "section_break_caty",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "flight",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Flight",
+   "options": "Airplane Flight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ajru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ticket",
+   "options": "Airplane Ticket",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nCompleted\nOverdue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_caty",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Schedule",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "passenger_details_section",
+   "fieldtype": "Section Break",
+   "label": "Passenger Details"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Flight Passenger",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jfxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "flight_details_section",
+   "fieldtype": "Section Break",
+   "label": "Flight Details"
+  },
+  {
+   "fieldname": "column_break_fqst",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-13 19:25:37.864093",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Payment Schedule",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

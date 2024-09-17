@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{tenant_name}-{shop_number}",
+ "creation": "2024-09-10 14:36:41.985946",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_number",
+  "shop_rent",
+  "airport",
+  "column_break_kjzf",
+  "tenant_name",
+  "tenant_phone_number",
+  "tenant_email",
+  "duration_details_section",
+  "date_of_contract_commencement",
+  "column_break_welv",
+  "date_of_contract_expiry"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "options": "Tenant Details",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_number.shop_rent",
+   "fieldname": "shop_rent",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Shop Rent",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_contract_expiry",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Contract Expiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kjzf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "non_negative": 1,
+   "options": "Shop Details",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_number.airport",
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tenant_name.tenant_phone_number",
+   "fieldname": "tenant_phone_number",
+   "fieldtype": "Data",
+   "label": "Tenant Phone Number"
+  },
+  {
+   "fieldname": "duration_details_section",
+   "fieldtype": "Section Break",
+   "label": "Duration Details"
+  },
+  {
+   "fieldname": "column_break_welv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "tenant_name.tenant_email",
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email"
+  },
+  {
+   "fieldname": "date_of_contract_commencement",
+   "fieldtype": "Date",
+   "label": "Date of Contract Commencement",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-13 10:57:24.344690",
+ "modified_by": "Administrator",
+ "module": "Airport Shops",
+ "name": "Contract Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
